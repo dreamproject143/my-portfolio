@@ -237,3 +237,86 @@ header {
         flex-direction: column;
     }
 }
+/* About Me Section */
+.about-me {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.about-me-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.about-me p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: var(--text);
+    opacity: 0.9;
+}
+/* Experience Section */
+.experience {
+    padding: 4rem 2rem;
+    background-color: var(--card-bg);
+}
+
+.experience-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.experience p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text);
+    opacity: 0.9;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    background-color: var(--card-bg);
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.contact p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    opacity: 0.9;
+}
+
+.contact .btn {
+    font-size: 1.125rem;
+    padding: 0.75rem 2rem;
+    margin-top: 1rem;
+}
