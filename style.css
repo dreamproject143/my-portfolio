@@ -76,6 +76,7 @@ header {
     display: flex;
     align-items: center;
     position: relative;
+    justify-content: center; /* Center the content horizontally */
 }
 
 .hero-content {
@@ -89,6 +90,9 @@ header {
 
 .hero-text {
     animation: slideInLeft 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensure text is aligned properly */
 }
 
 .hero-text h1 {
@@ -109,14 +113,15 @@ header {
 /* Profile Images */
 .profile-images {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center images in the hero section */
     gap: 20px;
     align-items: center;
+    flex-wrap: wrap; /* Allow the images to wrap on smaller screens */
 }
 
 .profile-img, .second-img, .third-img, .fourth-img {
     width: 100%;
-    max-width: 400px;
+    max-width: 350px; /* Reduce the max-width to maintain consistency */
     border-radius: 1rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     transform: perspective(1000px) rotateY(10deg);
@@ -125,16 +130,12 @@ header {
 }
 
 .profile-img {
-    width: 100%;
-    max-width: 400px;
     object-fit: cover; /* Ensures image fills the container */
 }
 
-/* Specific class for second profile image */
 .second-img, .third-img, .fourth-img {
-    margin-left: 20px;
     animation-delay: 1s; /* Adjust delay to create a staggered effect */
-    max-width: 400px; /* Set max width for second image */
+    max-width: 350px; /* Set max width for second image */
     object-fit: cover; /* Ensure second image fills the container correctly */
     transition: transform 0.5s ease;
 }
@@ -237,6 +238,7 @@ header {
         flex-direction: column;
     }
 }
+
 /* About Me Section */
 .about-me {
     padding: 4rem 2rem;
@@ -265,6 +267,7 @@ header {
     color: var(--text);
     opacity: 0.9;
 }
+
 /* Experience Section */
 .experience {
     padding: 4rem 2rem;
