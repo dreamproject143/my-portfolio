@@ -3,7 +3,7 @@
     --secondary: #10b981;
     --accent: #f59e0b;
     --text: #1e293b;
-    --bg: #f8fafc;
+    --bg: linear-gradient(45deg, #6EE7B7, #3B82F6, #9333EA, #EAB308); /* Dynamic Animated Gradient */
     --card-bg: rgba(255, 255, 255, 0.95);
     --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
 }
@@ -13,7 +13,7 @@
     --secondary: #34d399;
     --accent: #fbbf24;
     --text: #f8fafc;
-    --bg: #0f172a;
+    --bg: linear-gradient(135deg, #0F172A, #1E293B); /* Dark Gradient */
     --card-bg: rgba(15, 23, 42, 0.95);
 }
 
@@ -27,9 +27,18 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: var(--bg);
+    background-size: 400% 400%; /* Adjust the speed of the animation */
+    animation: gradientAnimation 15s ease infinite;
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+/* Keyframes for animated gradient */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Header Styles */
@@ -89,7 +98,6 @@ nav a:hover {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* Hero ```css
 /* Hero Section */
 .hero {
     padding: 120px 2rem 2rem;
@@ -127,7 +135,15 @@ nav a:hover {
     opacity: 0.9;
 }
 
-.profile-img {
+/* Profile Images */
+.profile-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.profile-img, .second-img {
     width: 100%;
     max-width: 400px;
     border-radius: 1rem;
@@ -135,6 +151,21 @@ nav a:hover {
     transform: perspective(1000px) rotateY(10deg);
     transition: transform 0.5s ease;
     animation: float 6s ease-in-out infinite;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover; /* Ensures image fills the container */
+}
+
+/* Specific class for second profile image */
+.second-img {
+    margin-left: 20px;
+    animation-delay: 1s; /* Adjust delay to create a staggered effect */
+    max-width: 400px; /* Set max width for second image */
+    object-fit: cover; /* Ensure second image fills the container correctly */
+    transition: transform 0.5s ease;
 }
 
 /* Projects Section */
@@ -278,7 +309,7 @@ footer {
 }
 
 .social-links a:hover {
-    color : var(--primary);
+    color: var(--primary);
 }
 
 /* Animations */
@@ -299,7 +330,13 @@ footer {
         text-align: center;
     }
 
-    .profile-img {
+    .profile-images {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .profile-img, .second-img {
         max-width: 300px;
         margin: 0 auto;
     }
