@@ -74,25 +74,27 @@ header {
     padding: 120px 2rem 2rem;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;  /* Stack the content vertically */
+    align-items: center;     /* Center the content */
+    justify-content: flex-start; /* Align items to the top */
     position: relative;
-    justify-content: center; /* Center the content horizontally */
 }
 
+/* Hero Content (heading and paragraph) */
 .hero-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center text and content */
+    gap: 2rem;
 }
 
 .hero-text {
     animation: slideInLeft 1s ease-out;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Ensure text is aligned properly */
+    align-items: center; /* Center the text */
 }
 
 .hero-text h1 {
@@ -110,13 +112,14 @@ header {
     opacity: 0.9;
 }
 
-/* Profile Images */
+/* Profile Images (Placed Below Hero Text) */
 .profile-images {
     display: flex;
-    justify-content: center; /* Center images in the hero section */
+    justify-content: center; /* Center images below the heading */
     gap: 20px;
     align-items: center;
-    flex-wrap: wrap; /* Allow the images to wrap on smaller screens */
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+    margin-top: 3rem; /* Space between paragraph and images */
 }
 
 .profile-img, .second-img, .third-img, .fourth-img {
