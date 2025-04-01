@@ -114,7 +114,7 @@ header {
     align-items: center;
 }
 
-.profile-img, .second-img {
+.profile-img, .second-img, .third-img, .fourth-img {
     width: 100%;
     max-width: 400px;
     border-radius: 1rem;
@@ -131,7 +131,7 @@ header {
 }
 
 /* Specific class for second profile image */
-.second-img {
+.second-img, .third-img, .fourth-img {
     margin-left: 20px;
     animation-delay: 1s; /* Adjust delay to create a staggered effect */
     max-width: 400px; /* Set max width for second image */
@@ -228,7 +228,7 @@ header {
         gap: 10px;
     }
 
-    .profile-img, .second-img {
+    .profile-img, .second-img, .third-img, .fourth-img {
         max-width: 300px;
         margin: 0 auto;
     }
