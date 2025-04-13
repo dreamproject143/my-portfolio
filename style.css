@@ -122,7 +122,7 @@ header {
     margin-top: 3rem; /* Space between paragraph and images */
 }
 
-.profile-img, .second-img, .third-img, .fourth-img {
+.profile-img, .second-img, .third-img, .fourth-img, .fifth-img {
     width: 100%;
     max-width: 350px; /* Reduce the max-width to maintain consistency */
     border-radius: 1rem;
